@@ -2,7 +2,7 @@
 
 **Equipe** : 4 étudiants  
 **Date** : 14/12/2020  
-**Duréee** : 1 mois  
+**Durée** : 1 mois  
 **Thème** : Recherche Opérationnelle, PLNE, Optimisation, Energie, CPLEX  
 
 ## Background du projet :
@@ -26,10 +26,10 @@ L'objectif de ce projet est de modéliser à l’aide de programmes linéaires m
 - **h** : coût horaire de stockage d’une unité d’énergie
 - **g** : coût horaire de variation du stock (en valeur absolue) d’une unité d’énergie (supposé négligeable par rapport à h)
 
-**Une demande d'énergie sur 8 heures :**
+**Une demande d'énergie sur 5 heures :**
 
-| Période       |  1   |
-| ------------- |------|
-| dt (demande)  |  5   | 
-| Ps (cu)       |  3   |
-| Fs (cf)       |  4   |  
+| Période       |  1   |  2  |  3  |  4  |  5  |
+| ------------- |------|-----|-----|-----|-----|
+| dt (demande)  |  5   |  7  |  2  |  12 |  10 |
+| Ps (cu)       |  3   |  4  |  7  |  5  |  4  |
+| Fs (cf)       |  4   |  3  |  2  |  3  |  5  |
