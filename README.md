@@ -1,9 +1,9 @@
 # Projet : Optimisation de la production de chaleur pour un éco-quartier
 
-**Equipe** : 4 étudiants
-**Date** : 14/12/2020
-**Duréee** : 1 mois
-**Thème** : Recherche Opérationnelle, PLNE, Optimisation, Energie, CPLEX
+**Equipe** : 4 étudiants  
+**Date** : 14/12/2020  
+**Duréee** : 1 mois  
+**Thème** : Recherche Opérationnelle, PLNE, Optimisation, Energie, CPLEX  
 
 ## Background du projet :
 
