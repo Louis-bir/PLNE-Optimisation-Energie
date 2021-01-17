@@ -26,7 +26,7 @@ L'objectif de ce projet est de modéliser à l’aide de programmes linéaires m
 - **h** : coût horaire de stockage d’une unité d’énergie
 - **g** : coût horaire de variation du stock (en valeur absolue) d’une unité d’énergie (supposé négligeable par rapport à h)
 
-**Une demande d'énergie sur 5 heures :**
+**Exemple de demande d'énergie sur 5 heures :**
 
 | Période       |  1   |  2  |  3  |  4  |  5  |
 | ------------- |------|-----|-----|-----|-----|
