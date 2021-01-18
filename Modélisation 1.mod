@@ -21,11 +21,11 @@ float g = ...; // cout horaire de variation du stock (en valeur absolue)
 /** Donnees utilisees uniquement par les parties 4 et 5 **/
  
 float F[chaudieres] = ...; // cout fixe de demarrage pour chaque chaudiere
-int N[chaudieres] = ...; // nombre minimum de periodes d’utilisation apres allumage pour chaque chaudiere
+int N[chaudieres] = ...; // nombre minimum de periodes apres allumage pour chaque chaudiere
 
 /** Parametres auxiliaires permettant des statistiques **/
 
-float debutExecution; // date de debut d'execution du programme
+float debutExecution;
 execute{
   var before = new Date();
   debutExecution = before.getTime();
