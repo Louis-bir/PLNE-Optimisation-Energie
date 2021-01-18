@@ -33,7 +33,7 @@ int K = T div Delta;
 
 /** Parametres auxiliaires permettant des statistiques **/
 
-float debutExecution; // date de debut d'execution du programme
+float debutExecution; // début execution
 execute{
   var before = new Date();
   debutExecution = before.getTime();
