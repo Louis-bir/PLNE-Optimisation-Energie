@@ -19,7 +19,7 @@ float p[chaudieres] = ...; // cout unitaire de production d’energie de chaque 
 float f[chaudieres] = ...; // cout fixe d'utilisation horaire de chaque chaudiere
 float C_sto = ...; // capacite de stockage en energie entre une periode et la periode suivante
 float h = ...; // cout horaire de stockage d’une unite d’energie
-float g = ...; // cout horaire de variation du stock (en valeur absolue) d’une unite d’energie
+float g = ...; // cout horaire de variation du stock (en valeur absolue) d’une unite d energie
 
 /** Donnees utilisees uniquement par les parties 4 et 5 **/
  
