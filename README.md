@@ -3,7 +3,7 @@
 **Equipe** : 4 étudiants  
 **Date** : 14/12/2020  
 **Durée** : 1 mois  
-**Thème** : Recherche Opérationnelle, PLNE, Optimisation, Energie, CPLEX
+**Thème** : Recherche Opérationnelle, PLNE, Optimisation, Energie, CPLEX  
 **Configuration pour les tests** : Sans coupes, sans gap  
 
 ## Background du projet :
