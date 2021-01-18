@@ -8,7 +8,7 @@
 /** Donnees generales **/
  
 int T = ...; // horizon de temps
-range periodes = 1..T; // ensemble des periodes 
+range periodes = 1..T; //ensemble des periodes 
 range sources = 0..2; // 0 pour le solaire, et 1 ou 2 pour les chaudieres (= sources pilotables)
 range chaudieres = 1..2; // 1 pour Bois, 2 pour Gaz
 float d[periodes]  = ...; // demande pour chaque periode
