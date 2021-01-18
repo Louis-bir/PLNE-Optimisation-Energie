@@ -38,9 +38,9 @@ L'objectif de ce projet est de modéliser à l’aide de programmes linéaires m
 
 ## Modélisation :
 
-Pour ce projet nous avons réalisé **4 modélisations** que nous avons run sur des instances de tailles différentes.
-Les variables, fonctions objectifs et contraintes propres à chaque modélisation se trouvent dans les fichiers .mod de ce repo.
-L'ensemble de ces modélisations ont été executé sur **CPLEX** et nous les avons confronté sur différents critères :
+Pour ce projet nous avons réalisé **4 modélisations** que nous avons run sur des instances de tailles différentes.  
+Les variables, fonctions objectifs et contraintes propres à chaque modélisation se trouvent dans les fichiers .mod de ce repo.  
+L'ensemble de ces modélisations ont été executé sur **CPLEX** et nous les avons confronté sur différents critères :  
 
 - Temps d'execution
 - Relaxation au noeud racine
