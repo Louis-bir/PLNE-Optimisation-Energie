@@ -82,7 +82,7 @@ subject to {
     ctdemandeJournaliere: I[t]==I[t-1] + sum(s in chaudieres)x[t][s]+xsol[t]-d[t]; 
     }
     
-    // Contrainte de type ""Big M"" pour la production d'énergie
+    // Contrainte de type ""Big M"" pour la production énergétique
     forall(s in chaudieres,t in periodes){
     y[t][s]*P_min[s] <= x[t][s];
     x[t][s] <= P_max[s]*y[t][s];    
