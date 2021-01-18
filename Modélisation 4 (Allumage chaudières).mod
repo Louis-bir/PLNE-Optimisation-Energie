@@ -48,7 +48,12 @@ dvar float+ xsol_tprime[periodes][periodes];
 dvar boolean y_paie[periodes][chaudieres]; 
 
 /** Objectif **/
+
+// Minimisation du coût de production et de stockage
+
  minimize sum(s in chaudieres,t in periodes) (f[s]*y[t][s]+ p[s]*x[t][s]+F[s]*y_paie[t][s])+ sum(t in periodes)(h*I[t] + g*varSDesc[t] + g*varSAugm[t]);
+ 
+ 
 /** Contraintes **/
 
 subject to {  
