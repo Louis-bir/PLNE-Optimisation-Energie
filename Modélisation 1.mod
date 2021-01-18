@@ -12,11 +12,11 @@ float d[periodes]  = ...; // demande pour chaque periode
 float P_max_solaire[periodes]=...; // energie solaire disponible pour chaque periode
 float P_min[chaudieres]=...; // energie minimale delivree par chaque chaudiere si elle est utilisee a une periode
 float P_max[chaudieres]=...; // energie maximale delivree par chaque chaudiere si elle est utilisee a une periode
-float p[chaudieres] = ...; // cout unitaire de production d’energie de chaque chaudiere
-float f[chaudieres] = ...; // cout fixe d'utilisation horaire de chaque chaudiere
+float p[chaudieres] = ...; // cout unitaire de production de chaque chaudiere
+float f[chaudieres] = ...; // cout fixe horaire de chaque chaudiere
 float C_sto = ...; // capacite de stockage en energie entre une periode et la periode suivante
-float h = ...; // cout horaire de stockage d’une unite d’energie
-float g = ...; // cout horaire de variation du stock (en valeur absolue) d’une unite d’energie
+float h = ...; // cout horaire de stockage
+float g = ...; // cout horaire de variation du stock (en valeur absolue)
 
 /** Donnees utilisees uniquement par les parties 4 et 5 **/
  
