@@ -42,9 +42,15 @@ execute{
  
 /** Variables **/
 
+// Production
 dvar float+ x[periodes][chaudieres]; 
+
+// Stock
 dvar float+ I[0..T]; 
+
+// Energie solaire
 dvar float+ xsol[periodes];
+
 dvar boolean y[periodes][chaudieres];
 dvar float+ varSDesc[periodes];
 dvar float+ varSAugm[periodes];
@@ -52,7 +58,12 @@ dvar float+ x_tprime[chaudieres][periodes][periodes];
 dvar float+ xsol_tprime[periodes][periodes]; 
 
 /** Objectif **/
+
+// On cherche à minimiser les coûts de production
+
  minimize sum(s in chaudieres,t in periodes) (f[s]*y[t][s]+ p[s]*x[t][s])+ sum(t in periodes)(h*I[t] + g*varSDesc[t] + g*varSAugm[t]);
+ 
+ 
 /** Contraintes **/
 
 subject to {  
