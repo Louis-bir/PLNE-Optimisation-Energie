@@ -101,7 +101,7 @@ subject to {
     I[k] <= C_sto;
     }
     
-    // Utilisation max de l'énergie solaire disponible
+    // Utilisation max sur énergie solaire disponible
     forall(k in lesK){
     xsol[k] <= sum(t in ((k-1)*Delta+1)..(k*Delta)) P_max_solaire[t];
     }
