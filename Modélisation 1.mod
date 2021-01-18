@@ -90,7 +90,7 @@ subject to {
     ctNRJSol: xsol[t] <= P_max_solaire[t];
     }
 
-    // Ajout d'une coupe
+    // Ajout de coupe
     forall(tzero in 2..T){
     ctcoupe1: I[tzero-1]+xsol[tzero]>=d[tzero]*(1-(y[tzero][1]+y[tzero][2]));   
     }
