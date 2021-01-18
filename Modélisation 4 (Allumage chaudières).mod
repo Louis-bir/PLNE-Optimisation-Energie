@@ -13,9 +13,9 @@ float P_max_solaire[periodes]=...; // energie solaire disponible pour chaque per
 float P_min[chaudieres]=...; // energie minimale delivree par chaque chaudiere si elle est utilisee a une periode
 float P_max[chaudieres]=...; // energie maximale delivree par chaque chaudiere si elle est utilisee a une periode
 float p[chaudieres] = ...; // cout unitaire de production d’energie de chaque chaudiere
-float f[chaudieres] = ...; // cout fixe d'utilisation horaire de chaque chaudiere
+float f[chaudieres] = ...; // cout fixe horaire de chaque chaudiere
 float C_sto = ...; // capacite de stockage en energie entre une periode et la periode suivante
-float h = ...; // cout horaire de stockage d’une unite d’energie
+float h = ...; // cout horaire de stockage
 float g = ...; // cout horaire de variation du stock (en valeur absolue) d’une unite d’energie
 
 /** Donnees utilisees uniquement par les parties 4 et 5 **/
@@ -29,7 +29,7 @@ int delta = 2; // TODO : tester avec differentes valeurs
 
 /** Parametres auxiliaires permettant des statistiques **/
 
-float debutExecution; // date de debut d'execution du programme
+float debutExecution; // 
 execute{
   var before = new Date();
   debutExecution = before.getTime();
