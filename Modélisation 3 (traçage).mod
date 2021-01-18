@@ -34,7 +34,7 @@ int delta = 2; // TODO : tester avec differentes valeurs
 
 /** Parametres auxiliaires permettant des statistiques **/
 
-float debutExecution; // date de debut d'execution du programme
+float debutExecution; // date de debut
 execute{
   var before = new Date();
   debutExecution = before.getTime();
