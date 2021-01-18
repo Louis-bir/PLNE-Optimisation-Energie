@@ -3,7 +3,8 @@
 **Equipe** : 4 étudiants  
 **Date** : 14/12/2020  
 **Durée** : 1 mois  
-**Thème** : Recherche Opérationnelle, PLNE, Optimisation, Energie, CPLEX  
+**Thème** : Recherche Opérationnelle, PLNE, Optimisation, Energie, CPLEX
+**Configuration pour les tests** : Sans coupes, sans gap  
 
 ## Background du projet :
 
@@ -33,3 +34,19 @@ L'objectif de ce projet est de modéliser à l’aide de programmes linéaires m
 | dt (demande)  |  5   |  7  |  2  |  12 |  10 |
 | Ps (cu)       |  3   |  4  |  7  |  5  |  4  |
 | Fs (cf)       |  4   |  3  |  2  |  3  |  5  |
+
+
+## Modélisation :
+
+Pour ce projet nous avons réaliser **4 modélisations** différentes que nous avons testé sur des instances de tailles différentes.
+
+L'ensemble de ces modélisations ont été executé sur CPLEX et nous les avons confronté sur différents critères :
+
+- Temps d'execution
+- Relaxation au noeud racine
+- Nombre de noeud de Branch & Bound
+- Meilleur objectif
+- Gap relatif (%) 
+
+
+
