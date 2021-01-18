@@ -38,15 +38,20 @@ L'objectif de ce projet est de modéliser à l’aide de programmes linéaires m
 
 ## Modélisation :
 
-Pour ce projet nous avons réaliser **4 modélisations** différentes que nous avons testé sur des instances de tailles différentes.
-
-L'ensemble de ces modélisations ont été executé sur CPLEX et nous les avons confronté sur différents critères :
+Pour ce projet nous avons réalisé **4 modélisations** que nous avons run sur des instances de tailles différentes.
+Les variables, fonctions objectifs et contraintes propres à chaque modélisation se trouvent dans les fichiers .mod de ce repo.
+L'ensemble de ces modélisations ont été executé sur **CPLEX** et nous les avons confronté sur différents critères :
 
 - Temps d'execution
 - Relaxation au noeud racine
-- Nombre de noeud de Branch & Bound
+- Nombre de noeuds de Branch & Bound
 - Meilleur objectif
 - Gap relatif (%) 
+
+**Modélisation 1 :** Modélisation "Classique"  
+**Modélisation 2 :** Modélisation agrégée sur des périodes Delta  
+**Modélisation 3 :** Modélisation avec traçage des périodes de consommation  
+**Modélisation 4 :** Modélisation avec démarrage des chaudières  
 
 
 
