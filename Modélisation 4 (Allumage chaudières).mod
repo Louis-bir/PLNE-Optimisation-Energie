@@ -57,30 +57,38 @@ dvar boolean y_paie[periodes][chaudieres];
 /** Contraintes **/
 
 subject to {  
-
+    
+    // Contraintes sur le traçage de la consommation
     forall(s in chaudieres, t in periodes){
     x[t][s] >= sum(u in t..T) x_tprime[s][t][u]; 
     }  
+    
+    // Contraintes sur le traçage de la consommation (solaire)
     forall(t in periodes){
     xsol[t]>= sum(u in t..T) xsol_tprime[t][u];    
     }  
-    //linearisation de la valeur absolue, qui est non lineaire par definition : racine carree de x au carre, x au carre => non lineaire
+    
+    
+    // Linearisation de la valeur absolue
     forall(t in periodes){
     ctVarStock: I[t]-I[t-1]==varSAugm[t]-varSDesc[t]; 
     }    
 
-    //ctStockInit: I[0] == 0;
+    // Initialisation du stock
     I[1]== sum(s in chaudieres) x[1][s] + xsol[1] - d[1]; 
     
+    // Contrainte défintion du stock
     forall(t in periodes){
     ctdemandeJournaliere: I[t]==I[t-1] + sum(s in chaudieres)x[t][s]+xsol[t]-d[t]; 
     }
     
+    // Contrainte de type ""Big M"" pour la production d'énergie
     forall(s in chaudieres,t in periodes){
     y[t][s]*P_min[s] <= x[t][s];
     x[t][s] <= P_max[s]*y[t][s];    
     }
     
+    // Contrainte sur le stock max autorisé
     forall(t in 1..T-1){
     ctStockMax: I[t] <= C_sto;  
     }
@@ -97,17 +105,17 @@ subject to {
     x_tprime[s][t][u]<=d[u]*y[t][s];   
     }
     
-     //La demande du jour t doit être satisfaite :
+     // Ajout de coupes
     
+    // Coupe 1 
     forall(t in periodes){
     	ctDemandeJournaliere : sum(s in chaudieres,u in 1..t) (x_tprime[s][u][t] + xsol_tprime[u][t]) == d[t];
     } 
     
-    //si on ne produit pas à tzero il faut avoir stocker au moins d_to en stock de la veille
+    // Coupe 2
     forall(tzero in 2..T){
    ctcoupe1: I[tzero-1]+xsol[tzero]>=d[tzero]*(1-(y[tzero][1]+y[tzero][2]));   
    }
-    
     
     forall(s in chaudieres){
     y[1][s]<=y_paie[1][s];    
@@ -118,9 +126,9 @@ subject to {
     }
        
     
-	forall(s in chaudieres, t in T-N[s]+1..T){
-		sum(u in t+N[s]-1..T) y[u][s]>=y_paie[t][s]; 	
-	} 
+    forall(s in chaudieres, t in T-N[s]+1..T){
+	sum(u in t+N[s]-1..T) y[u][s]>=y_paie[t][s]; 	
+    } 
 	
     forall(s in chaudieres, t in 1..T-N[s]+1){
         sum(u in t..t+N[s]-1) y[u][s] >= N[s]*y_paie[t][s]; 
