@@ -1,6 +1,6 @@
 /*********************************************
  * OPL 12.10.0.0 Model
- * Author: valentin
+ * Author: Louis
  * Creation Date: 30 nov. 2020 at 15:55:50
  *********************************************/
 
@@ -44,7 +44,6 @@ execute{
 // Nouvelle range de période agrégée
 range lesK = 1..K;
 
-
 // Production
 dvar float+ xbois[lesK];
 dvar float+ xgaz[lesK];
@@ -59,17 +58,16 @@ dvar float+ I[0..K];
 dvar float+ varSDesc[lesK];
 dvar float+ varSAugm[lesK];
 
-
-
 /** Objectif **/
+
+// L'objectif est de minimiser les coûts liés à la produciton d'énergie et au stockage.
 
 minimize (sum(k in lesK) ( f[1]*ybois[k] + f[2]*ygaz[k] + p[1]*xbois[k] + xgaz[k]*p[2] + h*I[k] + g*varSDesc[k] + g*varSAugm[k]));
 
 /** Contraintes **/
 
 subject to {  
-    
-    
+   
     // Valeur absolue
     forall(k in lesK){
     I[k] - I[k-1]==varSAugm[k]-varSDesc[k];
@@ -77,7 +75,8 @@ subject to {
 	
 	// Initialisation du stock
    	I[0] == 0;
-   	
+   
+   // Contraintes liées à la définiton du stock
     forall(k in lesK){
     	sum(t in ((k-1)*Delta+1)..(k*Delta)) d[t] + I[k] == I[k-1] + xbois[k] + xgaz[k] + xsol[k];	
     }
@@ -85,12 +84,12 @@ subject to {
        
     forall(k in lesK){
      
-    // Bois  
+    // Contraintes de production via la source Bois
     ybois[k]*P_min[1] <= xbois[k];
     xbois[k] <= P_max[1]*ybois[k];
     ybois[k] <= Delta;
     
-    // Gaz
+    // Contraintes de production via la source Bois
     ygaz[k]*P_min[2] <= xgaz[k];
     xgaz[k] <= P_max[2]*ygaz[k];
     ygaz[k] <= Delta;
